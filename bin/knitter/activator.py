@@ -43,7 +43,7 @@ if __name__ == "__main__":
 	a = 8
 	b = 1.1 
 	plt.xlim(-a, a)
-	plt.ylim(-0.2, b)
+	plt.ylim(-b, b)
 	# plt.plot([0, 0], [0, a], linewidth = 0.5, color = 'red', linestyle = "--")
 	# 绘制sigmoid函数图像
 	x = np.arange(-(a-1), (a-1), 0.1)
@@ -52,6 +52,9 @@ if __name__ == "__main__":
 	# 绘制阶跃函数图像
 	y = step_function(x) 
 	plt.plot(x, y, color = 'g', label = 'step')
+	# 绘制tanh函数图像
+	y = tanh_function(x) 
+	plt.plot(x, y, color = 'k', label = 'tanh')
 	# 绘制ReLU函数图像
 	y = relu_function(x) 
 	plt.plot(x, y, color = 'c', label = 'ReLU')

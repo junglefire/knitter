@@ -9,7 +9,7 @@ def mean_squared_error(y, t):
 
 ## 批量处理交叉熵
 ## 注意：标签必须采用one-hot编码
-def cross_entropy_error(y, t, onehot = True):
+def cross_entropy_error(y, t, onehot=False):
 	if y.ndim == 1:
 		t = t.reshape(1, t.size) 
 		y = y.reshape(1, y.size)
